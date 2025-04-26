@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>You're the Cutest!</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #ff66b2;
+      font-size: 3em;
+    }
+    p {
+      font-size: 1.5em;
+      color: #333;
+    }
+    .heart {
+      font-size: 5em;
+      color: red;
+      animation: heartbeat 1s infinite;
+    }
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      25% { transform: scale(1.2); }
+      50% { transform: scale(1); }
+      75% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ff66b2;
+      border: none;
+      border-radius: 20px;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #ff3385;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hey Beautiful! 🌸</h1>
+  <p>Just a reminder that you're...</p>
+  <div class="heart">❤️</div>
+  <p>...the cutest human alive!</p>
+
+  <button onclick="alert('I love you more than pizza! 🍕❤️')">Click Me!</button>
+
+</body>
+</html>
