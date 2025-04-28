@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Surprise!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #ffb6c1;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      padding: 30px;
+      color: #d10068;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      position: relative;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-top: 50px;
+    }
+    p {
+      font-size: 1.5em;
+      margin: 20px;
+    }
+    .photo-container {
+      position: relative;
+      display: inline-block;
+      margin-top: 30px;
+    }
+    .photo-container img {
+      width: 75%;
+      max-width: 250px; /* smaller photo */
+      border-radius: 20px;
+      box-shadow: 0 0 30px #ff69b4;
+      z-index: 2;
+      position: relative;
+    }
+    /* Heart particles */
+    .heart {
+      position: absolute;
+      font-size: 2em;
+      color: #ff1493;
+      animation: float 5s linear infinite;
+      opacity: 0.7;
+    }
+    @keyframes float {
+      0% { transform: translateY(100vh) scale(1); opacity: 1; }
+      100% { transform: translateY(-10vh) scale(0.5); opacity: 0; }
+    }
+    /* Love letter style */
+    .love-letter {
+      font-size: 1.2em;
+      font-style: italic;
+      color: #d10068;
+      margin-top: 20px;
+      padding: 20px;
+      background: #fff0f6;
+      border-radius: 10px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Heart particles -->
+  <div id="hearts"></div>
+
+  <h1>I LOVE YOUU SOO MUCHH  BABBYYYYYY💖</h1>
+
+  <!-- Photo -->
+  <div class="photo-container">
+    <img src="12.jpg" alt="Our Cute Photo">
+  </div>
+
+  <!-- Love letter under the photo -->
+  <div class="love-letter">
+    DEAR MY BABY CHING,  
+    <br><br>
+   HI BABY CHING, SORRY FOR EVERYTHING LOVE HUH SA TANAN NAKO NABUHAT SORRY NA DISSAPOINT TIKAW hayys KABALO KA PAG ABOT NIMO MY LIFE BECOME SOO SOO BEAUTIFUL FROM DARK TO COLORFUL HAYSS ASTIG KAAYO KA HONN SUPER GWAPA PAGID SHEESH MWUAAWMUWAA. BABY THANK YOU SO SO SO MUCH FOR STAYNG BISAN BULUYAGON KAAYO KO hehe DONT WORRY BABEE EVERYTHING WILL BE WORTH IT I PROMISE. I LOVEEE YOUUU HONN HAPPPYYY HAPPPYY MONTHSARRRYYYY HONEEY IMISSYOUU SOO MUCHH POOO UNYA NA AKO GIFT HUH hehe ILOVEYOUUU GWAPAAA💖  
+    <br><br>
+   YOUR HUSBAND,  
+    PELEP POGI 
+  </div>
+
+  <script>
+    const heartsContainer = document.getElementById('hearts');
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+      heart.innerText = '💖';
+      heartsContainer.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }
+
+    setInterval(createHeart, 400); // create heart every 0.4 second
+  </script>
+
+</body>
+</html>
